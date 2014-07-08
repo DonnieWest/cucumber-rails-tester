@@ -21,7 +21,7 @@ script: |
   rvm install 2.0.0
   ruby -v
   rvm use 2.0.0 --default
-  rvm do @global gem install cucumber selenium-webdriver capybara rspec launchy headless --no-rdoc --no-ri
+  rvm all do @global gem install cucumber selenium-webdriver capybara rspec launchy headless --no-rdoc --no-ri
   
 env:
   RUBY_VERSION: "2.0.0"
