@@ -18,11 +18,11 @@ script: |
 
   curl -L https://get.rvm.io | bash -s stable
   source /home/ubuntu/.rvm/scripts/rvm
-  rvm install 2.0.0
+  rvm install 2.1.2
   ruby -v
   rvm use 2.1.2 --default
   gem install cucumber selenium-webdriver capybara rspec launchy headless --no-rdoc --no-ri
   
 env:
-  RUBY_VERSION: "2.0.0"
+  RUBY_VERSION: "2.1.2"
   DISPLAY: ":99.0"
