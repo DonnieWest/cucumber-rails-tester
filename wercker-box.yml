@@ -20,8 +20,8 @@ script: |
   source /home/ubuntu/.rvm/scripts/rvm
   rvm install 2.0.0
   ruby -v
-  rvm use 2.0.0 --default
-  rvm all do @global gem install cucumber selenium-webdriver capybara rspec launchy headless --no-rdoc --no-ri
+  rvm use 2.1.2 --default
+  gem install cucumber selenium-webdriver capybara rspec launchy headless --no-rdoc --no-ri
   
 env:
   RUBY_VERSION: "2.0.0"
