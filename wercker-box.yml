@@ -14,7 +14,7 @@ description:
   I built this box for Ruby + Cucumber + Xvfb testing
 script: |
   sudo apt-get update
-  sudo apt-get install firefox build-essential curl wget libfreetype6-dev libfontconfig1-dev xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps git libqt4-dev
+  sudo apt-get install firefox build-essential curl wget libfreetype6-dev libfontconfig1-dev xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps git libqt4-dev libmysqlclient-dev
 
   curl -L https://get.rvm.io | bash -s stable
   source /home/ubuntu/.rvm/scripts/rvm
