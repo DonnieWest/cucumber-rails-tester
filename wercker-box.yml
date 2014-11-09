@@ -15,7 +15,9 @@ description:
 script: |
   sudo apt-get update
   sudo apt-get install firefox build-essential curl wget libfreetype6-dev libfontconfig1-dev xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps git libqt4-dev libmysqlclient-dev
-
+  
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+  
   curl -L https://get.rvm.io | bash -s stable
   source /home/ubuntu/.rvm/scripts/rvm
   rvm install 2.1.3
