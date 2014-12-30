@@ -19,7 +19,8 @@ script: |
   gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 
   touch ~/.rvmrc
-  echo "rvm_autoupdate_flag=2" > ~/.rvmrc
+  echo "rvm_autoupdate_flag=2" >> ~/.rvmrc
+  echo "rvm_install_on_use_flag=1" >> ~/.rvmrc
 
   curl -L https://get.rvm.io | bash -s stable
   source /home/ubuntu/.rvm/scripts/rvm
