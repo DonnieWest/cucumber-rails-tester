@@ -1,5 +1,5 @@
 name : ubuntu12.04-rails-ruby-firefox-cucumber
-version : 0.0.3
+version : 0.0.4
 type : main
 platform : ubuntu@12.04
 packages:
@@ -14,20 +14,20 @@ description:
   I built this box for Ruby + Cucumber + Xvfb testing
 script: |
   sudo apt-get update
-  sudo apt-get install firefox build-essential curl wget libfreetype6-dev libfontconfig1-dev xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps git libqt4-dev libmysqlclient-dev
+  sudo apt-get install firefox build-essential curl wget libfreetype6-dev libfontconfig1-dev xvfb x11-xkb-utils xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic x11-apps git libqt4-dev libmysqlclient-dev libgtkmm-2.4-dev
   
   gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 
   touch ~/.rvmrc
   echo "rvm_autoupdate_flag=2" >> ~/.rvmrc
   echo "rvm_install_on_use_flag=1" >> ~/.rvmrc
-
   curl -L https://get.rvm.io | bash -s stable
   source /home/ubuntu/.rvm/scripts/rvm
   rvm install 2.2
   ruby -v
   rvm use 2.2 --default
   rvm autolibs enable
+  rvm rvmrc warning ignore allGemfiles
   gem install cucumber selenium-webdriver capybara rspec launchy headless --no-rdoc --no-ri
   
 env:
